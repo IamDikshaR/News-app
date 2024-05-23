@@ -1,6 +1,8 @@
 import React, { useCallback } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useRef } from "react";
+import News from "./News";
 
 const Categories = () => {
   // const [data, setData] = useState([]);
@@ -36,6 +38,15 @@ const Categories = () => {
   const [click, setClick] = useState(false);
   const [category, setCategory] = useState("general");
   const categories = [
+    "general",
+    "business",
+    "technology",
+    "sports",
+    "entertainment",
+    "health",
+    "science",
+  ];
+  const display = [
     "General",
     "Business",
     "Technology",
@@ -45,25 +56,31 @@ const Categories = () => {
     "Science",
   ];
 
-  const handleClick = () => {
-    setClick(true);
-    //store and send of category news
-  };
+  useEffect(() => {
+    <News category={category} />;
+  }, [category]);
+
+  const defaultFocusRef = useRef(null);
+  useEffect(() => {
+    if (defaultFocusRef.current) {
+      defaultFocusRef.current.focus();
+    }
+  }, []);
   return (
     <>
-      <div className="flex flex-nowrap gap-1 my-4 mx-2 justify-around">
+      <div className="flex flex-nowrap my-4 mx-2 justify-around">
         {categories.map((category, index) => (
           <button
             key={index}
-            className={`text-xl hover:text-color-2 hover:underline hover:underline-offset-8 ${
-              click ? "bg-color-2/[0.2]" : ""
-            }`}
-            onClick={handleClick}
+            ref={index === 0 ? defaultFocusRef : null}
+            className={`py-2 text-xl hover:text-color-2 hover:underline hover:underline-offset-[15px] focus:text-color-2 focus:bg-color-2/[0.15] focus:w-1/6  focus:border-b-2 focus:border-color-2 focus:outline-none`}
+            onClick={() => setCategory(category)}
           >
             {category}
           </button>
         ))}
       </div>
+      <News category={category} />
     </>
   );
 };

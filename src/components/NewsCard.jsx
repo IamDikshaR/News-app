@@ -1,27 +1,27 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-const NewsCard = () => {
+const NewsCard = ({ article }) => {
   const imgAdress = "./public/image.png";
-  const article = {
-    source: {
-      id: "wired",
-      name: "Wired",
-    },
-    author: "Aarian Marshall",
-    title: "Everything You Need to Know About Hybrid Cars",
-    description:
-      "What’s the difference between a hybrid, a mild hybrid, and a plug-in hybrid? This is the WIRED guide for the electric-curious.",
-    url: "https://www.wired.com/story/everything-you-need-to-know-about-hybrid-cars/",
-    urlToImage:
-      "https://media.wired.com/photos/663393c4547d38327b3c2a1e/191:100/w_1280,c_limit/Hybrid-Gars-Guide-Gear-GettyImages-1137081327.jpg",
-    publishedAt: "2024-05-03T09:30:00Z",
-    content:
-      "Have you heard?The hybrids are coming. As sales growth falters for electric vehicles, particularly in the United States, automakers have started to turn their gaze toward the EVs less-charged-up cous… [+2587 chars]",
-  };
+  // const article = {
+  //   source: {
+  //     id: "wired",
+  //     name: "Wired",
+  //   },
+  //   author: "Aarian Marshall",
+  //   title: "Everything You Need to Know About Hybrid Cars",
+  //   description:
+  //     "What’s the difference between a hybrid, a mild hybrid, and a plug-in hybrid? This is the WIRED guide for the electric-curious.",
+  //   url: "https://www.wired.com/story/everything-you-need-to-know-about-hybrid-cars/",
+  //   urlToImage:
+  //     "https://media.wired.com/photos/663393c4547d38327b3c2a1e/191:100/w_1280,c_limit/Hybrid-Gars-Guide-Gear-GettyImages-1137081327.jpg",
+  //   publishedAt: "2024-05-03T09:30:00Z",
+  //   content:
+  //     "Have you heard?The hybrids are coming. As sales growth falters for electric vehicles, particularly in the United States, automakers have started to turn their gaze toward the EVs less-charged-up cous… [+2587 chars]",
+  // };
   return (
     <>
-      <div className="flex p-2 gap-2 border border-color-1 rounded-lg m-1 sm:border-2 sm:px-4 sm:flex-col sm:w-1/3">
+      <div className="flex p-2 gap-2 border border-color-1 rounded-lg m-1 sm:border-2 sm:px-4 sm:flex-col sm:w-[30%]">
         {article.urlToImage != null ? (
           <img
             src={article.urlToImage}
