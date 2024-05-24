@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <Categories />
-      {/* <ChannelSearch />
-      <ChannelButton /> */}
+      <ChannelSearch />
+      <ChannelButton />
     </>
   );
 }
