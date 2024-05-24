@@ -53,6 +53,8 @@ const NewsCard = ({ article }) => {
           </p>
           <a
             href={article.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="self-center px-10 bg-color-1 text-center text-white rounded"
           >
             Read More
