@@ -32,10 +32,20 @@ const News = ({ category }) => {
     fetchData();
   }, [API_KEY]);
 
-  const categorizedArticles = articles.filter((article) => {
-    const source = sources.find((src) => src.id === article.source.id);
-    return source && source.category === category;
-  });
+  //   const categorizedArticles = articles.filter((article) => {
+  //     const source = sources.find((src) => src.id === article.source.id);
+  //     return source && source.category === category;
+  //   });
+
+  const categorizeArticles = (article) => {
+    const id = article.source.id;
+    const articleCategory = sources.find((source) => source.id === id);
+    if (articleCategory != undefined) {
+      return articleCategory.category == category;
+    } else {
+      return category == "general";
+    }
+  };
 
   if (loading) {
     return <div className="flex justify-center">Loading...</div>;
@@ -43,26 +53,15 @@ const News = ({ category }) => {
 
   return (
     <div className="flex flex-wrap justify-center">
-      {categorizedArticles.length > 0 ? (
-        categorizedArticles.map((article, index) => (
-          //   <div key={index} className="my-4">
-          //     <a
-          //       href={article.url}
-          //       target="_blank"
-          //       //   rel="noopener noreferrer"
-          //       className="text-blue-500"
-          //     >
-          //       <h2 className="text-xl font-semibold">{article.title}</h2>
-          //     </a>
-          //     <p>{article.description}</p>
-          //   </div>
-          <NewsCard article={article} />
-        ))
-      ) : (
-        <div className="flex justify-center">
-          No articles found for this category.
-        </div>
-      )}
+      {articles.map((article, index) => {
+        categorizeArticles(article) ? (
+          <div key={index}>
+            <NewsCard article={article} />
+          </div>
+        ) : (
+          <div className="flex justify-center">No articles in this section</div>
+        );
+      })}
     </div>
   );
 };
