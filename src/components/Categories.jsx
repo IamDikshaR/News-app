@@ -5,10 +5,10 @@ import { useRef } from "react";
 import News from "./News";
 
 const Categories = () => {
-  const [category, setCategory] = useState("general");
+  const [category, setCategory] = useState("headlines");
   const [show, setShow] = useState(false);
   const categories = [
-    "general",
+    "headlines",
     "business",
     "technology",
     "sports",
@@ -83,7 +83,7 @@ const Categories = () => {
           </button>
         ))}
       </div>
-      {/* <News category={category} /> */}
+      <News category={category} />
     </>
   );
 };
