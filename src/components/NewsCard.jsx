@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const NewsCard = ({ article }) => {
-  const imgAdress = "./public/image.png";
+  const imgAdress = "/image.png";
   // const article = {
   //   source: {
   //     id: "wired",

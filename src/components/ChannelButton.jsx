@@ -5,7 +5,7 @@ const ChannelButton = () => {
   const [itemsToShow, setItemsToShow] = useState(50);
   const [loading, setLoading] = useState(true);
   const SOURCE_URL = "https://newsapi.org/v2/top-headlines/sources";
-  const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+  const API_KEY = import.meta.env.VITE_NEWS_API_KEY_SOURCE;
 
   useEffect(() => {
     async function fetchChannel() {
@@ -31,6 +31,8 @@ const ChannelButton = () => {
         {data.slice(0, itemsToShow).map((source) => (
           <a
             key={source.id}
+            target="_blank"
+            rel="noopener noreferrer"
             className="m-1 border-2 border-color-1 text-color-1 rounded px-4 py-2 hover:bg-color-1 hover:text-white"
             href={source.url}
           >
@@ -41,7 +43,7 @@ const ChannelButton = () => {
       {itemsToShow < data.length && (
         <div className="flex justify-center mt-4">
           <button
-            className="bg-color-1 text-white rounded px-4 py-2"
+            className="bg-color-1 text-white rounded px-4 py-2 hover:shadow-md hover:px-5 hover:py-3 hover:text-lg hover:shadow-slate-400"
             onClick={handleLoadMore}
           >
             Load More

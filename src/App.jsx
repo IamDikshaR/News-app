@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      <Categories />
-      {/* <ChannelSearch />
-      <ChannelButton /> */}
+      {/* <Categories /> */}
+      <ChannelSearch />
+      <ChannelButton />
       {/* <NewsCard /> */}
     </>
   );

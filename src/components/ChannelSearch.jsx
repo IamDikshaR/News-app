@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const ChannelSearch = () => {
   const [query, setQuery] = useState("");
   const SOURCE_URL = "https://newsapi.org/v2/top-headlines/sources";
-  const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+  const API_KEY = import.meta.env.VITE_NEWS_API_KEY_SOURCE;
   useEffect(() => {
     //code to search
   }, [query]);

@@ -5,36 +5,6 @@ import { useRef } from "react";
 import News from "./News";
 
 const Categories = () => {
-  // const [data, setData] = useState([]);
-  // const [categories, setCategories] = useState([]);
-  // const URL = "https://newsapi.org/v2/top-headlines/sources";
-  // const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   async function fetchChannel() {
-  //     const response = await fetch(`${URL}?apiKey=${API_KEY}`);
-  //     const results = await response.json();
-  //     setData(results.sources);
-  //     setLoading(false);
-  //   }
-  //   fetchChannel();
-  // }, []);
-  // useEffect(() => {
-  //   const category = data.map((source) => source.category);
-  //   setCategories([...new Set(category)]);
-  // }, [!loading]);
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-  // return (
-  //   <>
-  //     <div className="flex flex-nowrap gap-1 mx-2 ">
-  //       {categories.map((category) => (
-  //         <button key={category}> {category}</button>
-  //       ))}
-  //     </div>
-  //   </>
-  // );
   const [category, setCategory] = useState("general");
   const [show, setShow] = useState(false);
   const categories = [
