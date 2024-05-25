@@ -21,7 +21,7 @@ const NewsCard = ({ article }) => {
   // };
   return (
     <>
-      <div className="flex p-2 gap-2 border border-color-1 rounded-lg m-1 sm:border-2 sm:px-4 sm:flex-col sm:w-[30%]">
+      <div className="min-w-full flex p-2 gap-2 border border-color-1 rounded-lg m-1 sm:border-2 sm:px-4 sm:flex-col sm:w-[30%] sm:min-w-[30%] sm:max-h-84 ">
         {article.urlToImage != null ? (
           <img
             src={article.urlToImage}
@@ -48,7 +48,7 @@ const NewsCard = ({ article }) => {
             </p>
             <p className="text-xs sm:text-slate-500">{article.publishedAt}</p>
           </div>
-          <p className="hidden sm:block text-sm text-slate-700">
+          <p className="hidden sm:block text-sm text-slate-700 overflow-hidden">
             {article.description}
           </p>
           <a

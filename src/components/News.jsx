@@ -29,7 +29,7 @@ const News = ({ category }) => {
   }
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-2">
+      <div className="mx-3 flex flex-wrap justify-center gap-2">
         {data.slice(0, itemsToShow).map((article, index) => (
           // article.title != [Removed] ? <NewsCard article={article} /> : ""
           <NewsCard article={article} key={index} />

@@ -12,8 +12,8 @@ function App() {
       <Categories />
       <ChannelSearch />
       <ChannelButton />
+      {/* <NewsCard /> */}
     </>
   );
 }
-
 export default App;
