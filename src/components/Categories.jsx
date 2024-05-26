@@ -5,7 +5,7 @@ import { useRef } from "react";
 import News from "./News";
 
 const Categories = () => {
-  const [category, setCategory] = useState("headlines");
+  const [category, setCategory] = useState(["headlines", "General"]);
   const [show, setShow] = useState(false);
   const categories = [
     "headlines",
@@ -34,24 +34,21 @@ const Categories = () => {
   }, []);
   return (
     <>
-      <div className="sm:hidden flex justify-end mx-2">
+      {/* <div className="sm:hidden flex justify-end mx-2"></div> */}
+      <div className="sm:hidden flex bg-color-2/[0.15] mb-2 items-center justify-end gap-4">
+        <h3 className="sm:hidden text-lg text-color-2">{category[1]}</h3>
         <i
-          className="material-icons text-4xl"
+          className="material-icons text-4xl text-color-2"
           onClick={() => setShow((prevShow) => !prevShow)}
         >
-          menu
+          {!show ? (
+            <span class="material-symbols-outlined">arrow_drop_down</span>
+          ) : (
+            <span class="material-symbols-outlined">arrow_drop_up</span>
+          )}
         </i>
       </div>
       <div>
-        <h3
-          className={`sm:hidden ${
-            !show
-              ? "text-center text-lg text-color-2 bg-color-2/[0.15]"
-              : "hidden"
-          }`}
-        >
-          {category}
-        </h3>
         {show && (
           <div className="flex flex-col items-center gap-2">
             {display.map((category, index) => (
@@ -60,7 +57,7 @@ const Categories = () => {
                 ref={index === 0 ? defaultFocusRef : null}
                 className={`py-2 text-xl hover:text-color-2 hover:underline hover:underline-offset-[15px] focus:text-color-2 focus:bg-color-2/[0.15] focus:w-1/6  focus:border-b-2 focus:border-color-2 focus:outline-none`}
                 onClick={() => {
-                  setCategory(categories[index]);
+                  setCategory([categories[index], display[index]]);
                   setShow((prevShow) => !prevShow);
                 }}
               >
@@ -77,13 +74,13 @@ const Categories = () => {
             key={index}
             ref={index === 0 ? defaultFocusRef : null}
             className={`py-2 text-xl hover:text-color-2 hover:underline hover:underline-offset-[15px] focus:text-color-2 focus:bg-color-2/[0.15] focus:w-1/6  focus:border-b-2 focus:border-color-2 focus:outline-none`}
-            onClick={() => setCategory(categories[index])}
+            onClick={() => setCategory([categories[index], display[index]])}
           >
             {category}
           </button>
         ))}
       </div>
-      <News category={category} />
+      <News category={category[0]} />
     </>
   );
 };
