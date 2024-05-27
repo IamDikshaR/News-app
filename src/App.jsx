@@ -5,6 +5,7 @@ import Categories from "./components/Categories";
 import NewsCard from "./components/NewsCard";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
+import SearchNews from "./components/SearchNews";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,6 +27,7 @@ function App() {
         </i>
       </div> */}
       {/* <NewsCard /> */}
+      {/* <SearchNews /> */}
     </>
   );
 }
