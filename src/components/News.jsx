@@ -32,7 +32,11 @@ const News = ({ category }) => {
       <div className="mx-3 flex flex-wrap justify-center gap-2">
         {data.slice(0, itemsToShow).map(
           (article, index) =>
-            article.title != "[Removed]" ? <NewsCard article={article} /> : ""
+            article.title != "[Removed]" ? (
+              <NewsCard article={article} key={index} />
+            ) : (
+              ""
+            )
           // <NewsCard article={article} key={index} />
         )}
       </div>

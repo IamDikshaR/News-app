@@ -19,7 +19,7 @@ const ChannelSearch = () => {
         >
           <i className="material-icons text-color-3">search</i>
           <input
-            className=" bg-color-3/[0.05] min-w-80"
+            className=" bg-color-3/[0.05] min-w-60"
             value={query}
             placeholder="Search Channel"
             onChange={(e) => setQuery(e.target.value)}
