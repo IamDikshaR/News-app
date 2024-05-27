@@ -4,6 +4,7 @@ import ChannelButton from "./components/ChannelButton";
 import Categories from "./components/Categories";
 import NewsCard from "./components/NewsCard";
 import Header from "./components/Header";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <Header />
+      <SearchBar />
       <Categories />
       <ChannelSearch />
       <ChannelButton />
