@@ -26,6 +26,6 @@ News API: https://newsapi.org/
 
 ![screeshot3](./public/Screenshot%202024-05-29%20154711.png | width = 100) -->
 <div class= "flex gap-2">
-<img src="./public/Screenshot%202024-05-29%20154509.png" width="100">
-<img src="./public/Screenshot%202024-05-29%20154649.png" width="100">
-<img src="./public/Screenshot%202024-05-29%20154711.png " width="100"></div>
+<img src="./public/Screenshot%202024-05-29%20154509.png" width="250">
+<img src="./public/Screenshot%202024-05-29%20154649.png" width="250">
+<img src="./public/Screenshot%202024-05-29%20154711.png " width="250"></div>
