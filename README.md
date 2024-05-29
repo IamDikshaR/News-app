@@ -18,13 +18,14 @@ News API: https://newsapi.org/
 
 ## The App
 
-[![demo](https://raw.githubusercontent.com/IamDikshaR/News-app/master/public/Screenshot%202024-05-29%20160135.png)](https://raw.githubusercontent.com/IamDikshaR/master/News-app/public/News%20app%20demo.mp4)
+[![demo](https://raw.githubusercontent.com/IamDikshaR/News-app/master/public/Screenshot%202024-05-29%20160135.png)](https://raw.githubusercontent.com/IamDikshaR/News-app/master/public/News%20app%20demo.mp4)
 
 <!-- ![screeshot1](./public/Screenshot%202024-05-29%20154509.png | width = 100)
 
 ![screeshot2](./public/Screenshot%202024-05-29%20154649.png | width = 100)
 
 ![screeshot3](./public/Screenshot%202024-05-29%20154711.png | width = 100) -->
+<div class= "flex gap-2">
 <img src="./public/Screenshot%202024-05-29%20154509.png" width="100">
 <img src="./public/Screenshot%202024-05-29%20154649.png" width="100">
-<img src="./public/Screenshot%202024-05-29%20154711.png " width="100">
+<img src="./public/Screenshot%202024-05-29%20154711.png " width="100"></div>
